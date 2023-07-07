@@ -1,0 +1,104 @@
+body {
+    margin: 0px;
+}
+
+header {
+    /* height: 50px; */
+    background-color: #2787f5;
+}
+
+.top_menu {
+    max-width: 1140px;
+    border: 1px solid black;
+    margin: auto;
+    display: flex;
+}
+
+.top_menu input {
+    border-radius: 20px;
+    height: 70%;
+}
+
+.logo {
+    height: 75px;
+    width: 75px;
+    border-radius: 20px;
+}
+
+h1 {
+    color: white;
+}
+
+main {
+    margin: auto;
+    max-width: 1140px;
+    display: grid;
+    grid-template-columns: 1fr 2.5fr 1fr;
+    grid-gap: 1vw;
+    margin-top: 10px;
+}
+
+nav {
+    border: 1px solid black;
+}
+
+nav>ul {
+    margin: 0px;
+    padding-left: 5px;
+    list-style-type: none;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 28px;
+    border-radius: 20px;
+}
+
+aside {
+    border: 1px solid rgb(104, 30, 30);
+    border-radius: 20px;
+}
+
+article {
+    border: 1px solid rgb(34, 168, 41);
+    border-radius: 20px;
+}
+
+section {
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+    width: 90%;
+    margin: 5px auto;
+    border-radius: 20px;
+    background-color: #2787f53d;
+}
+
+.ava_img {
+    height: 75px;
+    width: 75px;
+    border-radius: 50px;
+    border: 1px solid red;
+    margin: 5px;
+    float: left;
+}
+
+.post_img {
+    height: 271px;
+    width: 510px;
+
+    border: 1px solid red;
+    margin: 5px;
+}
+
+.ava_wreapper {
+    margin: 10px;
+    height: 287px;
+    background-color: #2787f53d;
+    padding-top: 5px;
+}
+
+.big_ava_img {
+    margin: 1px auto;
+    width: 94%;
+    height: 200px;
+    border-radius: 130px;
+    border: 1px solid black;
+    display: block;
+}

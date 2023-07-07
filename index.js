@@ -1,4 +1,4 @@
-var userName = 'Vasiliy';
+/*var userName = 'Vasiliy';
 var message = 'Hello';
 console.log(userName);
 
@@ -12,6 +12,12 @@ styles[2] = "Рок-н-ролл";
 styles[1] = "Классика";
 alert(styles.shift());
 styles.unshift("Реп", "Регги");
-console.log(styles);
+console.log(styles);*/
 
+const logoElem = document.getElementById("someButton");
+console.log(logoElem);
+const alertFunc = () => {
+    console.log("sdvsd")
+}
+logoElem.onclick = alertFunc;
 

@@ -131,6 +131,7 @@ main {
     color: aliceblue;
     transition: 0.5s;
     cursor: pointer;
+    margin-top: 10px;
 }
 
 .names {
@@ -150,5 +151,4 @@ main {
 
 .newsTextArea{
     width: 100%;
-    min-height: 80px;
 }

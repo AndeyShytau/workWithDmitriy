@@ -65,20 +65,28 @@ let el3 = document.getElementsByClassName('newsSection');
 let el4 = document.getElementById('moreInfoProfile');
 let el5 = document.getElementById('news1');
 let el6 = document.getElementById('sendNewsButton');
+let newsArr = [];
+
 el2.addEventListener("click", function () {
-    if (el4.style.height = '0px') {
+    if (el4.offsetHeight == 0) {
         el4.style.height = '200px';
         el2.textContent = 'Cвернуть';
     } else {
         el4.style.height = '0px';
         el2.textContent = 'Показать больше';
     }
+
+    console.log(typeof el4.offsetHeight);
 });
 
 el6.addEventListener("click", function () {
-    let infoToArr = el6.textContent;
-    console.log(infoToArr);
-    console.log("hhhhhhhhhh");
+    let infoToArr = el5.value.trim();
+    newsArr.push({
+        id: newsArr.length,
+        text: infoToArr,
+    })
+    el5.value = "";
+    console.log(newsArr);
 })
 
 // el2.removeEventListener("click", function () {

@@ -1,7 +1,7 @@
 @font-face {
     font-family: "Noto Serif Myanmar";
     src: local("Noto Serif Nyamar"),
-    url("../fonts/Noto_Serif/NotoSerif-VariableFont_wdth,wght.ttf");
+    url("./fonts/Noto_Serif/NotoSerif-VariableFont_wdth,wght.ttf");
 }
 
 body {
@@ -164,8 +164,4 @@ main {
 
 .labelForTextarea {
     margin-bottom: 10px;
-}
-
-.sendNewsButton {
-
 }

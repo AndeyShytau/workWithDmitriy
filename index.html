@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="main/style.css">
     <link rel="stylesheet" type="text/css" href="modules/addNews/style.css">
+    <link rel="stylesheet" type="text/css" href="modules/getUserInfo/style.css">
     <title>Document</title>
 </head>
 
@@ -41,13 +42,29 @@
                     <div>Минск</div>
                 </div>
                 <button class="moreProfileInfoButton" id="moreInfoButton">Показать больше</button>
-                <div id="moreInfoProfile">Больше информации и т д t is a long established fact that a reader will be distracted by
-                    the readable content of a page when looking at its layout. The point of using Lorem Ipsum is
-                    that it has a more-or-less normal distribution of letters, as opposed to using 'Content here,
-                    content here', making it look like readable English. Many desktop publishing packages and web
-                    page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will
-                    uncover many web sites still in their infancy. Various versions have evolved over the years,
-                    sometimes by accident, sometimes on purpose (injected humour and the like).
+                <div id="moreInfoProfile">
+                    <div>
+                        <span>Пол: Мужской </span>
+                        <span>Возраст: 33</span>
+                        <span>Семейное положение: не женат</span>
+                    </div>
+                    <div>
+                        <p>Контактные данные</p>
+                        <img src="modules/getUserInfo/img/position.png">
+                        <span>Минск</span>
+                        <br>
+                        <img src="modules/getUserInfo/img/tr.png">
+                        <a href="tel:+375293573759">+375293573759</a>
+                        <br>
+                        <img src="modules/getUserInfo/img/telega.png">
+                        <a href="">@Andrey_Shutoff</a>
+                        <div>
+                            <p>О себе</p>
+                            Фирмы в этой сфере могут обслуживать несколько компаний-заказчиков одновременно и привлекать к работе поставщиков оборудования при необходимости. Чаще всего инжиниринговая компания состоит из нескольких крупных предприятий или холдингов с разными функциями. Например, одна фирма занимается проектированием, другая — строительством, остальные — поставками и установкой оборудования, монтажом, технадзором, последующим обслуживанием и ремонтом.
+                            Компании, которые способны выполнять весь процесс от начала до конца, называют инжиниринговыми компаниями полного цикла. В большинстве случаев инжиниринговые компании специализируются на строительстве, информационных технологиях, телекоммуникации и связи, и осуществляют полное руководство техническими проектами. Это включает в себя планирование локации для строительства, получение всех необходимых юридических разрешений и заключение договоров, поставку и техобслуживание оборудования, строительство и сдача объекта в эксплуатацию.
+                            Давайте детальнее рассмотрим, какие услуги предоставляют инжиниринговые компании
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -56,8 +73,8 @@
         <section class="contentContainer">
             <section class="newsSection">
                 <div class="addNewNewsBlock">
-                    <label for="news1" class="labelForTextarea">Add new news</label>
-                    <textarea class="newsTextArea" id="news1" rows="1"></textarea>
+                    <label for="newsArea" class="labelForTextarea">Add new news</label>
+                    <textarea class="newsTextArea" id="newsArea" rows="1"></textarea>
                     <input id="sendNewsButton" class="moreProfileInfoButton" type="submit" value="Отправить">
                 </div>
                 <div>

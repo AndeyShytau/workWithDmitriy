@@ -1,0 +1,10 @@
+#moreInfoProfile img{
+    width:25px;
+    height: 25px;
+}
+
+#moreInfoProfile a{
+    text-decoration: none;
+    color: black;
+
+}

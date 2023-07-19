@@ -1,35 +1,64 @@
 import {addNewsList} from "../modules/addNews/news.js";
 import { userNews } from "./constants.js";
 
-const el2 = document.getElementById('moreInfoButton');
-const el4 = document.getElementById('moreInfoProfile');
-const el5 = document.getElementById('news1');
-const el6 = document.getElementById('sendNewsButton');
+const currentUser = {
+    id: 1,
+    gender: 'male',
+    age: 33,
+    name: 'andrey',
+    surname: 'shytau',
+    surname1: 'valerevich',
+    brif: '',
+    status: 'unmarred',
+    city: 'minsk',
+    phone: '+375293573759',
+    telegramm: '@Andrey_Shutoff',
+    instagramm: '',
+    twitter: '',
+    classmates: [],
+    friends: [],
+    subscribers: [],
+};
+
+const moreInfoButton = document.getElementById('moreInfoButton');
+const moreInfoProfile = document.getElementById('moreInfoProfile');
+const newsArea = document.getElementById('newsArea');
+const sendNewsButton = document.getElementById('sendNewsButton');
 
 const newsArr = [];
-
-el2.addEventListener("click", function () {
-    if (el4.offsetHeight === 0) {
-        el4.style.height = '200px';
-        el2.textContent = 'Cвернуть';
+let isShowMoreInfo = false;
+moreInfoButton.addEventListener("click", function (e) {
+    console.log(e);
+    if (isShowMoreInfo === false) {
+        e.nextElementSibling.style.height = '200px';
+        moreInfoButton.textContent = 'Cвернуть';
+        isShowMoreInfo = !isShowMoreInfo;
     } else {
-        el4.style.height = '0px';
-        el2.textContent = 'Показать больше';
+        e.nextElementSibling.style.height = '0px';
+        moreInfoButton.textContent = 'Показать больше';
+        isShowMoreInfo = !isShowMoreInfo;
     }
 
-    console.log(typeof el4.offsetHeight);
+    console.log(typeof moreInfoProfile.offsetHeight);
 });
 
 
-el6.addEventListener("click", function () {
-    let infoToArr = el5.value.trim();
+sendNewsButton.addEventListener("click", function () {
+    let infoToArr = newsArea.value.trim();
     newsArr.push({
         id: newsArr.length,
         text: infoToArr,
     });
-    el5.value = "";
+    newsArea.value = "";
     console.log(newsArr);
 });
 
 
+const showMoreInfo = (user, block ) => {
+    const userInfo = `
+
+    `
+}
+
+showMoreInfo(currentUser, moreInfoProfile);
 addNewsList(userNews, 'newsListBlock');

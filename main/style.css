@@ -123,6 +123,7 @@ main {
     padding: 10px;
     color: #5C6898;
     transition: 0.5s;
+    margin-bottom: 10px;
 }
 
 .moreProfileInfoButton:hover {

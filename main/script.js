@@ -3,14 +3,14 @@ import { userNews, currentUser } from "./constants.js";
 import {addUserInfo} from "../modules/getUserInfo/addUserInfo.js";
 
 const moreInfoButton = document.getElementById('moreInfoButton');
-const moreInfoProfile = document.getElementById('moreInfoProfile');
 const newsArea = document.getElementById('newsArea');
 const sendNewsButton = document.getElementById('sendNewsButton');
+const saveProfileChanges = document.getElementById('saveProfileChanges');
+const setNewAge = document.getElementById('setNewAge');
 
 const newsArr = [];
 let isShowMoreInfo = false;
 moreInfoButton.addEventListener("click", function (e) {
-    console.log(e);
     if (isShowMoreInfo === false) {
         e.target.nextElementSibling.style.height = 'auto';
         moreInfoButton.textContent = 'Cвернуть';
@@ -20,8 +20,6 @@ moreInfoButton.addEventListener("click", function (e) {
         moreInfoButton.textContent = 'Показать больше';
         isShowMoreInfo = !isShowMoreInfo;
     }
-
-    console.log(typeof moreInfoProfile.offsetHeight);
 });
 
 
@@ -35,6 +33,13 @@ sendNewsButton.addEventListener("click", function () {
     console.log(newsArr);
 });
 
+saveProfileChanges.onclick = () => {
+    currentUser.age = Number(setNewAge.value);
+    addUserInfo(currentUser, 'moreInfoProfile');
+}
+
+
+
 
 addNewsList(userNews, 'newsListBlock');
-addUserInfo(currentUser, moreInfoProfile);
+addUserInfo(currentUser, 'moreInfoProfile');

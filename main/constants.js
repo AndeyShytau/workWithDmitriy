@@ -1,11 +1,11 @@
 export const currentUser = {
     id: 1,
     gender: 'male',
-    age: 33,
+    age: 10,
     name: 'andrey',
     surname: 'shytau',
     surname1: 'valerevich',
-    brif: '',
+    brif: 'GJHJHHGJBVGJGGHB',
     status: 'unmarred',
     city: 'minsk',
     phone: '+375293573759',

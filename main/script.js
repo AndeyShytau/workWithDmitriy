@@ -1,24 +1,6 @@
 import {addNewsList} from "../modules/addNews/news.js";
-import { userNews } from "./constants.js";
-
-const currentUser = {
-    id: 1,
-    gender: 'male',
-    age: 33,
-    name: 'andrey',
-    surname: 'shytau',
-    surname1: 'valerevich',
-    brif: '',
-    status: 'unmarred',
-    city: 'minsk',
-    phone: '+375293573759',
-    telegramm: '@Andrey_Shutoff',
-    instagramm: '',
-    twitter: '',
-    classmates: [],
-    friends: [],
-    subscribers: [],
-};
+import { userNews, currentUser } from "./constants.js";
+import {addUserInfo} from "../modules/getUserInfo/addUserInfo.js";
 
 const moreInfoButton = document.getElementById('moreInfoButton');
 const moreInfoProfile = document.getElementById('moreInfoProfile');
@@ -30,11 +12,11 @@ let isShowMoreInfo = false;
 moreInfoButton.addEventListener("click", function (e) {
     console.log(e);
     if (isShowMoreInfo === false) {
-        e.nextElementSibling.style.height = '200px';
+        e.target.nextElementSibling.style.height = 'auto';
         moreInfoButton.textContent = 'Cвернуть';
         isShowMoreInfo = !isShowMoreInfo;
     } else {
-        e.nextElementSibling.style.height = '0px';
+        e.target.nextElementSibling.style.height = '0px';
         moreInfoButton.textContent = 'Показать больше';
         isShowMoreInfo = !isShowMoreInfo;
     }
@@ -54,11 +36,5 @@ sendNewsButton.addEventListener("click", function () {
 });
 
 
-const showMoreInfo = (user, block ) => {
-    const userInfo = `
-
-    `
-}
-
-showMoreInfo(currentUser, moreInfoProfile);
 addNewsList(userNews, 'newsListBlock');
+addUserInfo(currentUser, moreInfoProfile);

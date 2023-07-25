@@ -2,13 +2,13 @@ import {addNewsList} from "../modules/addNews/news.js";
 import {addUserInfo} from "../modules/getUserInfo/addUserInfo.js";
 import {getRequests} from "../api/getters.js";
 import {GET_PROFILE_DATA, GET_USER_MESSAGES, GET_USER_NEWS} from "../api/constants.js";
-import {setProfileData} from "../api/setters.js";
+import {setProfileData, setUserMessagesData, setUserNewsData} from "../api/setters.js";
+import {newUserMessages, newUserNews, newUserData} from "./constants.js";
 
 const moreInfoButton = document.getElementById('moreInfoButton');
 const newsArea = document.getElementById('newsArea');
 const sendNewsButton = document.getElementById('sendNewsButton');
 const saveProfileChanges = document.getElementById('saveProfileChanges');
-const setNewAge = document.getElementById('setNewAge');
 
 const newsArr = [];
 let isShowMoreInfo = false;
@@ -40,25 +40,10 @@ sendNewsButton.addEventListener("click", function () {
     console.log(newsArr);
 });
 
-const newUserdata = {
-    id: 1,
-    gender: 'male',
-    age: 10,
-    name: 'Andrey',
-    surname: 'Shytau',
-    surname1: 'Valerevich',
-    brif: 'text about me',
-    status: 'unmarred',
-    city: 'minsk',
-    phone: '+375293573759',
-    telegramm: '@Andrey_Shutoff',
-    instagramm: '',
-    twitter: '',
-    classmates: [],
-    friends: [],
-    subscribers: [],
-};
-
-saveProfileChanges.onclick = () => setProfileData(newUserdata);
+saveProfileChanges.onclick = () => {
+    setProfileData(newUserData).then(r => r);
+    setUserNewsData(newUserNews).then(r => r);
+    setUserMessagesData(newUserMessages).then(r => r);
+}
 
 

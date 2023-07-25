@@ -1,7 +1,7 @@
 export const addNewsList = (newsArray, blockId) => {
     const blockForListNews = document.getElementById(blockId);
 
-    const listNews = newsArray.map((item) => {
+    const listNews = newsArray?.map((item) => {
         const comments = item.comments.map((comment) => {
             return `<div>${comment}</div>`
         })

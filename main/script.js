@@ -1,6 +1,8 @@
 import {addNewsList} from "../modules/addNews/news.js";
-import { userNews, currentUser } from "./constants.js";
+import {currentUser } from "./constants.js";
 import {addUserInfo} from "../modules/getUserInfo/addUserInfo.js";
+import {getRequests} from "../api/getters.js";
+import {PROFILE_DATA, USER_MESSAGES, USER_NEWS} from "../api/constants.js";
 
 const moreInfoButton = document.getElementById('moreInfoButton');
 const newsArea = document.getElementById('newsArea');
@@ -10,6 +12,11 @@ const setNewAge = document.getElementById('setNewAge');
 
 const newsArr = [];
 let isShowMoreInfo = false;
+
+getRequests(PROFILE_DATA).then((res) => addUserInfo(...res, 'moreInfoProfile'));
+getRequests(USER_NEWS).then((res) => addNewsList(res, 'newsListBlock'));
+getRequests(USER_MESSAGES).then((res) => console.log('messages', res));
+
 moreInfoButton.addEventListener("click", function (e) {
     if (isShowMoreInfo === false) {
         e.target.nextElementSibling.style.height = 'auto';
@@ -37,9 +44,3 @@ saveProfileChanges.onclick = () => {
     currentUser.age = Number(setNewAge.value);
     addUserInfo(currentUser, 'moreInfoProfile');
 }
-
-
-
-
-addNewsList(userNews, 'newsListBlock');
-addUserInfo(currentUser, 'moreInfoProfile');

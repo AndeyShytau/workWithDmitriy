@@ -41,9 +41,8 @@ sendNewsButton.addEventListener("click", function () {
 });
 
 saveProfileChanges.onclick = () => {
-    setProfileData(newUserData).then(r => r);
-    setUserNewsData(newUserNews).then(r => r);
-    setUserMessagesData(newUserMessages).then(r => r);
+    setProfileData(newUserData).then(r => console.log(r.statusText));
+    setUserNewsData(newUserNews).then(r => console.log(r.statusText));
+    setUserMessagesData(newUserMessages).then(r => console.log(r.statusText));
 }
-
 

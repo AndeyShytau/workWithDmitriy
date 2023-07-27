@@ -1,1 +1,2 @@
-export const getRequests = (url) => fetch(url).then(resp => resp.json());
+export const getRequests = (url) => fetch(url)
+    .then(resp => resp.json());

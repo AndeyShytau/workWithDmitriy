@@ -41,8 +41,45 @@ sendNewsButton.addEventListener("click", function () {
 });
 
 saveProfileChanges.onclick = () => {
-    setProfileData(newUserData).then(r => console.log(r.statusText));
-    setUserNewsData(newUserNews).then(r => console.log(r.statusText));
-    setUserMessagesData(newUserMessages).then(r => console.log(r.statusText));
+    setProfileData(newUserData).then(response => {
+        if (response.ok) {
+            response.json().then(updatedData => {
+                console.log('Обновленные данные:', updatedData);
+            }).catch(error => {
+                console.error('Ошибка при парсинге JSON:', error);
+            });
+        } else {
+            console.error('Ошибка при запросе:', response.statusText);
+        }
+    }).catch(error => {
+        console.error('Произошла ошибка:', error);
+    });
+
+    setUserNewsData(newUserNews).then(response => {
+        if (response.ok) {
+            response.json().then(updatedData => {
+                console.log('Обновленные данные:', updatedData);
+            }).catch(error => {
+                console.error('Ошибка при парсинге JSON:', error);
+            });
+        } else {
+            console.error('Ошибка при запросе:', response.statusText);
+        }
+    }).catch(error => {
+        console.error('Произошла ошибка:', error);
+    });
+    setUserMessagesData(newUserMessages).then(response => {
+        if (response.ok) {
+            response.json().then(updatedData => {
+                console.log('Обновленные данные:', updatedData);
+            }).catch(error => {
+                console.error('Ошибка при парсинге JSON:', error);
+            });
+        } else {
+            console.error('Ошибка при запросе:', response.statusText);
+        }
+    }).catch(error => {
+        console.error('Произошла ошибка:', error);
+    });
 }
 

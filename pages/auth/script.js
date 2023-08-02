@@ -5,16 +5,16 @@ const password = document.getElementById('password');
 const authButton = document.getElementById('authButton');
 
 const authData = {
-    login,
-    password
+    login: null,
+    password: null,
 }
 
 authButton.onclick = (e) => {
     e.preventDefault();
     authData.login = login.value;
-    authData.password = login.password;
+    authData.password = password.value;
 
     if (login.value && password.value) {
-        auth(authData).then((r) => r);
+        auth(authData).then((r) => console.log(r.ok));
     }
 }

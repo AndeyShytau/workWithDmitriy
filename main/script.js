@@ -68,6 +68,7 @@ saveProfileChanges.onclick = () => {
     }).catch(error => {
         console.error('Произошла ошибка:', error);
     });
+
     setUserMessagesData(newUserMessages).then(response => {
         if (response.ok) {
             response.json().then(updatedData => {

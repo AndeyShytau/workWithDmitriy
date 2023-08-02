@@ -13,7 +13,7 @@ const saveProfileChanges = document.getElementById('saveProfileChanges');
 const newsArr = [];
 let isShowMoreInfo = false;
 
-getRequests(GET_PROFILE_DATA).then((res) => addUserInfo(res, 'moreInfoProfile'));
+getRequests(GET_PROFILE_DATA).then((res) => addUserInfo(res[0], 'moreInfoProfile'));
 getRequests(GET_USER_NEWS).then((res) => addNewsList(res, 'newsListBlock'));
 getRequests(GET_USER_MESSAGES).then((res) => console.log('messages', res));
 

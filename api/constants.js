@@ -1,8 +1,11 @@
-export const GET_PROFILE_DATA = 'http://185.237.15.7/profile';
-export const GET_USER_NEWS = 'http://185.237.15.7/user-news';
-export const GET_USER_MESSAGES = 'http://185.237.15.7/user-messages';
+const BASE_URL = 'http://185.237.15.7';
+
+export const GET_PROFILE_DATA = `${BASE_URL}/profile`;
+export const GET_USER_NEWS = `${BASE_URL}/user-news`;
+export const GET_USER_MESSAGES = `${BASE_URL}/user-messages`;
 
 
-export const SET_PROFILE_DATA = 'http://185.237.15.7/setProfileData';
-export const SET_NEWS_DATA = 'http://185.237.15.7/setUserNewsData';
-export const SET_MESSAGES_DATA = 'http://185.237.15.7/setUserMessagesData';
+export const SET_PROFILE_DATA = `${BASE_URL}/setProfileData`;
+export const SET_NEWS_DATA = `${BASE_URL}/setUserNewsData`;
+export const SET_MESSAGES_DATA = `${BASE_URL}/setUserMessagesData`;
+export const REGISTRATION_NEW_USER = `${BASE_URL}/register`;

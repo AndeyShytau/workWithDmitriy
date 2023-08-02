@@ -11,19 +11,19 @@ export const addUserInfo = (user, container) => {
        <span>${user.city}</span>
        <br>
        <img src="modules/getUserInfo/img/tr.png" alt=""/>
-       <a href="tel:${user.phone}">${user.phone}</a>
+       <a href="tel:${user.phoneNumber}">${user.phoneNumber}</a>
        <br>
        <img src="modules/getUserInfo/img/telega.png" alt=""/>
-       <a href="">${user.telegramm}</a>
+       <a href="">${user.telegram}</a>
        <br>
         <img src="modules/getUserInfo/img/telega.png" alt=""/>
         <a href="">${user.twitter}</a>
         <br>
         <img src="modules/getUserInfo/img/telega.png" alt=""/>
-        <a href="">${user.instagramm}</a>
+        <a href="">${user.instagram}</a>
         <div>
                <p>О себе</p>
-                ${user.brif}
+                ${user.aboutMe}
         </div>
     </div>
     `

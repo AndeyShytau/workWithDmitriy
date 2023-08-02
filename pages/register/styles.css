@@ -1,0 +1,76 @@
+@font-face {
+    font-family: "Noto Serif Myanmar";
+    src: local("Noto Serif Nyamar"),
+    url("../../fonts/Noto_Serif/NotoSerif-VariableFont_wdth,wght.ttf");
+}
+
+body {
+    margin: 0;
+    background: aliceblue;
+    font-family: "Noto Serif Myanmar", sans-serif;
+}
+
+header {
+    background: #5C6898;
+    padding: 15px 70px;
+    margin-bottom: 30px;
+}
+
+.logoText {
+    font-size: 30px;
+}
+
+.underLogoText {
+    font-size: 13px;
+    color: aliceblue;
+}
+
+.registerForm {
+    margin: 50px auto 0;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+.inputContainer {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+
+input {
+    height: 30px;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 15px;
+}
+
+.registerButton {
+    height: 50px;
+    border: 1px solid #5C6898;
+    border-radius: 15px;
+    margin-top: 20px;
+    color: #5C6898;
+    font-size: 16px;
+    background: inherit;
+    transition: 0.7s;
+}
+
+.registerButton:hover {
+    background: #5C6898;
+    color: aliceblue;
+    transition: 0.7s;
+    cursor: pointer;
+}
+
+.formLabel {
+    text-align: center;
+    margin-top: 100px;
+    font-weight: bold;
+    font-size: 20px;
+}

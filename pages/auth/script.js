@@ -1,4 +1,4 @@
-import {auth} from "../../api/auth";
+import {auth} from "../../api/auth.js";
 
 const login = document.getElementById('login');
 const password = document.getElementById('password');

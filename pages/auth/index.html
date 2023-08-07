@@ -14,7 +14,10 @@
     <div class="underLogoText">from Andrey</div>
 </header>
 <main>
-    <div class="registerFormContainer">
+    <div id="preloader">
+        <div id="loader"></div>
+    </div>
+    <div class="registerFormContainer" id="registerFormContainer">
         <div class="formLabel">Регистрация нового пользователя</div>
         <form id="registerForm" class="registerForm" >
             <div class="inputContainer">
@@ -28,6 +31,9 @@
             </div>
 
             <button class="registerButton" id="authButton">Войти</button>
+            <div class="registerRequest">Нет аккаунта?
+                <a class="registerLink" id="registerLink">Зарегистрируйтесь</a>
+            </div>
         </form>
     </div>
 </main>

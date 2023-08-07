@@ -1,9 +1,10 @@
 import {addNewsList} from "../../modules/addNews/news.js";
 import {addUserInfo} from "../../modules/getUserInfo/addUserInfo.js";
 import {getRequests} from "../../api/getters.js";
-import {GET_PROFILE_DATA, GET_USER_MESSAGES, GET_USER_NEWS} from "../../api/constants.js";
+import {GET_PROFILE_DATA, GET_USER_NEWS} from "../../api/constants.js";
 import {setProfileData, setUserMessagesData, setUserNewsData} from "../../api/setters.js";
 import {newUserMessages, newUserNews, newUserData} from "./constants.js";
+import {checkAuth} from "../../helpers/helpers.js";
 
 const moreInfoButton = document.getElementById('moreInfoButton');
 const newsArea = document.getElementById('newsArea');
@@ -13,9 +14,10 @@ const saveProfileChanges = document.getElementById('saveProfileChanges');
 const newsArr = [];
 let isShowMoreInfo = false;
 
+checkAuth();
+
 getRequests(GET_PROFILE_DATA).then((res) => addUserInfo(res[0], 'moreInfoProfile'));
 getRequests(GET_USER_NEWS).then((res) => addNewsList(res, 'newsListBlock'));
-getRequests(GET_USER_MESSAGES).then((res) => console.log('messages', res));
 
 moreInfoButton.addEventListener("click", function (e) {
     if (isShowMoreInfo === false) {

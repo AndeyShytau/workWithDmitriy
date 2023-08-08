@@ -25,6 +25,60 @@ header {
     color: aliceblue;
 }
 
+
+#editProfileButton {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    border: 1px solid #5C6898;
+    border-radius: 15px;
+    padding: 10px;
+    color: #5C6898;
+    cursor: pointer;
+}
+
+#editProfileInfo {
+    width: 600px;
+    position: fixed;
+    right: -650px;
+    border: 1px solid black;
+    border-radius: 15px;
+    background: #5C6898;
+    transition: 0.5s;
+}
+
+#editForm input:not(input[type=submit]), textarea {
+    width: 60%;
+    float: right;
+    margin-right: 10px;
+    margin-top: 5px;
+
+}
+
+#editForm label {
+    display: inline-block;
+    padding-top: 5px;
+}
+
+#closeEditForm {
+    cursor: pointer;
+    position: absolute;
+    top: -25px;
+    right: -25px;
+
+}
+
+#saveEditFormButton {
+    border: 1px solid #5C6898;
+    border-radius: 15px;
+    padding: 10px;
+    color: #5C6898;
+    cursor: pointer;
+    margin-left: 230px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
 .sideBar ul li a {
     text-decoration: none;
     color: #313131;
@@ -98,7 +152,7 @@ main {
     background: #d6e2ee;
     margin-right: 20px;
     border-radius: 15px;
-    height: 100vh;
+    /*height: 100vh;*/
 }
 
 .friendsSection {
@@ -149,7 +203,7 @@ main {
     transition: 2s;
 }
 
-.newsTextArea{
+.newsTextArea {
     width: 60%;
     height: 50px;
     margin-bottom: 10px;

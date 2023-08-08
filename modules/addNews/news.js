@@ -11,7 +11,11 @@ export const addNewsList = (newsArray, blockId) => {
         <div class="newsCreationDate">${item.creationDate}</div>
         <div class="newsText">${item.text}</div>
         <div class="newsCommnetsBlock">
+        <label>add comment</label>
+        <textarea class="newsTextArea"></textarea>
+        <input class="moreProfileInfoButton" type="submit" value="Отправить" >
             <div class="newsCommentsLabel">Комментарии</div>
+            
             <div class="newsComment">${comments.join('')}</div>
         </div>
     </div>`

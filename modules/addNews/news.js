@@ -1,3 +1,6 @@
+import {userNews} from "../../main/constants.js";
+
+
 export const addNewsList = (newsArray, blockId) => {
     const blockForListNews = document.getElementById(blockId);
 
@@ -10,10 +13,13 @@ export const addNewsList = (newsArray, blockId) => {
         <img src=${item.picture} alt="" class="newsImg"/>
         <div class="newsCreationDate">${item.creationDate}</div>
         <div class="newsText">${item.text}</div>
-        <div class="newsCommnetsBlock">
-        <label>add comment</label>
-        <textarea class="newsTextArea"></textarea>
-        <input class="moreProfileInfoButton" type="submit" value="Отправить" >
+        
+        <div class="newsCommenetsBlock">
+        
+        <label for="commentsTextArea">add comment</label>
+        <textarea id="commentsTextArea" class="newsTextArea" rows="1"></textarea>
+        <button id="sendCommentsButton"  class="moreProfileInfoButton sendCommentsButton"  >Оставить комментарий</button>
+       
             <div class="newsCommentsLabel">Комментарии</div>
             
             <div class="newsComment">${comments.join('')}</div>
@@ -21,5 +27,6 @@ export const addNewsList = (newsArray, blockId) => {
     </div>`
     });
 
-    return blockForListNews.innerHTML = listNews.join('');
+     blockForListNews.innerHTML = listNews.join('');
+
 }

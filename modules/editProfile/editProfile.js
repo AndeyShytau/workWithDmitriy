@@ -1,5 +1,5 @@
-export const editProfile = (user) => {
-
+import {currentUser as user} from "../../main/constants.js";
+const getLayout = () =>{
     const editProfileButton = document.getElementById('editProfileButton');
     const editProfileInfo = document.getElementById('editProfileInfo');
     const editForm = document.getElementById('editForm');
@@ -44,7 +44,11 @@ export const editProfile = (user) => {
         editProfileInfo.style.right = '-650px';
         editProfileButton.textContent = 'Редактировать профиль';
     });
+}
 
+
+export const editProfile = (user) => {
+    getLayout();
 }
 
 

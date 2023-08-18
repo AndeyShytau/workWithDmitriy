@@ -1,0 +1,36 @@
+.sideBar ul li a {
+    text-decoration: none;
+    color: #313131;
+}
+
+.sideBar ul li {
+    list-style: none;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.sideBar ul li:hover {
+    background: #5C6898;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.sideBar ul li:hover a {
+    color: aliceblue;
+}
+
+.sideBar ul {
+    padding: 15px;
+    margin: 0;
+}
+
+.sideBar {
+    margin-right: 50px;
+    width: 20%;
+    background: #D1D5FA;
+    box-sizing: border-box;
+    border-radius: 15px;
+    height: 30%;
+}

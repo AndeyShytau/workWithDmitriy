@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<head id="head">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="main/style.css">
-    <link rel="stylesheet" type="text/css" href="modules/addNews/style.css">
-    <link rel="stylesheet" type="text/css" href="modules/getUserInfo/style.css">
+
+
     <title>Document</title>
 </head>
 
 <body>
-<header>
-    <div class="logoText">Social Media</div>
-    <div class="underLogoText">from Andrey</div>
-    <label for="themeCheckBox">
-        Тёмная тема
-    </label>
-    <input type="checkbox" id="themeCheckBox">
+<header id="header">
 
-    <button id="editProfileButton" class="buttons">Редактировать профиль</button>
+<!--    <div class="logoText">Social Media</div>-->
+<!--    <div class="underLogoText">from Andrey</div>-->
+
+
+<!--    <label for="themeCheckBox">-->
+<!--        Тёмная тема-->
+<!--    </label>-->
+<!--    <input type="checkbox" id="themeCheckBox">-->
+
+<!--    <button id="editProfileButton" class="buttons">Редактировать профиль</button>-->
 
     <div id="editProfileInfo">
         <form id="editForm">
@@ -67,14 +69,8 @@
 
 </header>
 <main>
-    <nav class="sideBar">
-        <ul>
-            <li><a href="">Моя страница</a></li>
-            <li><a href="">Новости</a></li>
-            <li><a href="">Мессенджер</a></li>
-            <li><a href="">Друзья</a></li>
-            <li><a href="">Сообщества</a></li>
-        </ul>
+    <nav class="sideBar" id="sideBar">
+
     </nav>
 
     <div class="basicContent" id="contentContainer">
@@ -92,7 +88,7 @@
 
                 </div>
 
-                <button id="saveProfileChanges">SEND</button>
+
                 <!--                <label>-->
                 <!--                    <input type="text" id="setNewAge" placeholder="Возраст">-->
                 <!--                </label>-->
@@ -115,7 +111,6 @@
                     <div id="newsListBlock">
 
 
-
                     </div>
                 </div>
             </section>
@@ -126,8 +121,15 @@
         </section>
     </div>
 </main>
+<footer id="footer">
+
+
+</footer>
+
+
 <script src="main/script.js" type="module"></script>
+
+
 </body>
 
 </html>
-

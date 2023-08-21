@@ -1,5 +1,7 @@
 import {userNews} from "../../main/constants.js";
 
+const lengthOfNews = userNews[0].text.length;
+console.log(lengthOfNews);
 
 export const addNewsList = (newsArray, blockId) => {
     const blockForListNews = document.getElementById(blockId);
@@ -12,7 +14,7 @@ export const addNewsList = (newsArray, blockId) => {
         return `<div class="newsListElement">
         <img src=${item.picture} alt="" class="newsImg"/>
         <div class="newsCreationDate">${item.creationDate}</div>
-        <div class="newsText">${item.text}</div>
+        <div class="newsText" id="newsText">${item.text}</div>
         
         <div class="newsCommenetsBlock">
         
@@ -30,3 +32,4 @@ export const addNewsList = (newsArray, blockId) => {
      blockForListNews.innerHTML = listNews.join('');
 
 }
+

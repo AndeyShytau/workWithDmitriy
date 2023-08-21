@@ -1,9 +1,20 @@
 import {currentUser as user} from "../../main/constants.js";
-const getLayout = () =>{
-    const editProfileButton = document.getElementById('editProfileButton');
-    const editProfileInfo = document.getElementById('editProfileInfo');
+import {getHead} from "../getHead/getHead.js";
+import {getHeader} from "../getHeader/getHeader.js";
+import {getMenu} from "../getMenu/menu.js";
+import {getFooter} from "../getFooter/getFooter.js";
+
+const body = document.getElementsByTagName('body');
+const slideOneDescription = document.getElementById('slideOneDescription');
+const getTemplate = () => {
+    getHead();
+    getHeader();
+    getMenu();
+    getFooter();
+}
+getTemplate();
+
     const editForm = document.getElementById('editForm');
-    const closeEditForm = document.getElementById('closeEditForm');
     const saveEditFormButton = document.getElementById('saveEditFormButton');
 
     editForm[0].value = user.name;
@@ -31,24 +42,34 @@ const getLayout = () =>{
         user.twitter = editForm[9].value;
         user.brif = editForm[10].value;
         console.log(user);
-
-
     }
 
-    editProfileButton.addEventListener("click", function (e) {
-        e.target.nextElementSibling.style.right = '50px';
-        e.target.textContent = 'Закончить редактирование';
-    });
-
-    closeEditForm.addEventListener("click", function (e) {
-        editProfileInfo.style.right = '-650px';
-        editProfileButton.textContent = 'Редактировать профиль';
-    });
-}
 
 
-export const editProfile = (user) => {
-    getLayout();
-}
+    // editProfileButton.addEventListener("click", function (e) {
+    //     e.target.nextElementSibling.style.right = '50px';
+    //     e.target.textContent = 'Закончить редактирование';
+    // });
+    //
+    // closeEditForm.addEventListener("click", function (e) {
+    //     editProfileInfo.style.right = '-650px';
+    //     editProfileButton.textContent = 'Редактировать профиль';
+    // });
 
 
+
+// export const editProfile = (user) => {
+//     getLayout();
+// }
+
+themeCheckBox.onclick = (e) => {
+    if (e.target.checked) {
+        body[0].style.background = "#5C6898";
+        slideOneDescription.innerHTML="Включена тёмная тема";
+        getTemplate();
+    } else {
+        body[0].style.background = "aliceblue";
+        slideOneDescription.innerHTML="Включена светлая тема";
+        getTemplate();
+    }
+};

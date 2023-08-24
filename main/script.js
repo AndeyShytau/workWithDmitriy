@@ -1,4 +1,4 @@
-import {addNewsList} from "../modules/addNews/news.js";
+import {addNewsList, hashTags, maxHeightOfNews} from "../modules/addNews/news.js";
 import {addUserInfo} from "../modules/getUserInfo/addUserInfo.js";
 import {getRequests} from "../api/getters.js";
 
@@ -10,7 +10,8 @@ import {getFooter} from "../modules/getFooter/getFooter.js";
 import {getMenu} from "../modules/getMenu/menu.js";
 import {getHeader} from "../modules/getHeader/getHeader.js";
 import {getHead} from "../modules/getHead/getHead.js"
-import {maxHeightOfNews} from "../modules/addNews/news.js";
+
+
 
 const moreInfoButton = document.getElementById('moreInfoButton');
 const newsArea = document.getElementById('newsArea');
@@ -55,9 +56,8 @@ sendNewsButton.addEventListener("click", function () {
         comments: []
     });
     newsArea.value = "";
-
     addNewsList(userNews, 'newsListBlock');
-    maxHeightOfNews();
+    hashTags(userNews);
     console.log(userNews)
 });
 
@@ -70,9 +70,10 @@ sendNewsButton.addEventListener("click", function () {
 addUserInfo(currentUser, 'moreInfoProfile');
 addNewsList(userNews, 'newsListBlock');
 sendComment(userNews);
-maxHeightOfNews();
+hashTags(userNews);
 
 document.addEventListener('click', e => console.log(e))
+
 
 
 

@@ -26,7 +26,7 @@
 
 .newsText {
     overflow: hidden;
-    height: 92px;
+    height: auto;
     margin-bottom: 10px;
     position: relative;
 }

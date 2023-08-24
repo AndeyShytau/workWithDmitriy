@@ -10,6 +10,7 @@ import {getFooter} from "../modules/getFooter/getFooter.js";
 import {getMenu} from "../modules/getMenu/menu.js";
 import {getHeader} from "../modules/getHeader/getHeader.js";
 import {getHead} from "../modules/getHead/getHead.js"
+import {maxHeightOfNews} from "../modules/addNews/news.js";
 
 const moreInfoButton = document.getElementById('moreInfoButton');
 const newsArea = document.getElementById('newsArea');
@@ -54,7 +55,9 @@ sendNewsButton.addEventListener("click", function () {
         comments: []
     });
     newsArea.value = "";
+
     addNewsList(userNews, 'newsListBlock');
+    maxHeightOfNews();
     console.log(userNews)
 });
 
@@ -67,13 +70,10 @@ sendNewsButton.addEventListener("click", function () {
 addUserInfo(currentUser, 'moreInfoProfile');
 addNewsList(userNews, 'newsListBlock');
 sendComment(userNews);
+maxHeightOfNews();
 
 document.addEventListener('click', e => console.log(e))
 
 
-const func = () => {
-    const newsText = document.getElementById("newsText");
-    console.log(typeof (newsText.offsetHeight));
 
-}
-func()
+

@@ -1,7 +1,3 @@
-import {userNews} from "../../main/constants.js";
-
-const lengthOfNews = userNews[0].text.length;
-console.log(lengthOfNews);
 
 export const addNewsList = (newsArray, blockId) => {
     const blockForListNews = document.getElementById(blockId);
@@ -15,6 +11,7 @@ export const addNewsList = (newsArray, blockId) => {
         <img src=${item.picture} alt="" class="newsImg"/>
         <div class="newsCreationDate">${item.creationDate}</div>
         <div class="newsText" id="newsText">${item.text}</div>
+   
         
         <div class="newsCommenetsBlock">
         
@@ -33,3 +30,25 @@ export const addNewsList = (newsArray, blockId) => {
 
 }
 
+export const maxHeightOfNews = () => {
+    const newsCollection = document.getElementsByClassName("newsText");
+    const arrayFromCollection = Array.from(newsCollection);
+    const wrapper = document.getElementById('newsListBlock');
+
+    arrayFromCollection.map((item) => {
+        if (item.textContent.length > 150) {
+            item.style.height = '92px';
+            item.classList.add('newsText1');
+        }
+
+    })
+
+    function handleClick(e){
+        if(e.target.classList.contains("newsText1")){
+            e.target.style.height = "auto";
+            e.target.classList.remove('newsText1');
+        }
+
+    }
+    wrapper.addEventListener('click', handleClick);
+}

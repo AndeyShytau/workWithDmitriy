@@ -10,12 +10,9 @@ import {getMenu} from "../modules/getMenu/menu.js";
 import {getHeader} from "../modules/getHeader/getHeader.js";
 import {getHead} from "../modules/getHead/getHead.js"
 
-
-
 const moreInfoButton = document.getElementById('moreInfoButton');
 const newsArea = document.getElementById('newsArea');
 const sendNewsButton = document.getElementById('sendNewsButton');
-
 let isShowMoreInfo = false;
 
 const getTemplate = () => {

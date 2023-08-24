@@ -1,7 +1,6 @@
 import {addNewsList, hashTags, maxHeightOfNews} from "../modules/addNews/news.js";
 import {addUserInfo} from "../modules/getUserInfo/addUserInfo.js";
 import {getRequests} from "../api/getters.js";
-
 import {GET_PROFILE_DATA, GET_USER_MESSAGES, GET_USER_NEWS} from "../api/constants.js";
 import {setProfileData, setUserMessagesData, setUserNewsData} from "../api/setters.js";
 import {newUserMessages, newUserNews, newUserData, currentUser, userNews, date,} from "./constants.js";
@@ -17,9 +16,6 @@ const moreInfoButton = document.getElementById('moreInfoButton');
 const newsArea = document.getElementById('newsArea');
 const sendNewsButton = document.getElementById('sendNewsButton');
 
-const sendCommentsButton = document.getElementsByClassName('sendCommentsButton');
-
-const newsArr = [];
 let isShowMoreInfo = false;
 
 const getTemplate = () => {

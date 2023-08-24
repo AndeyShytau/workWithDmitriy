@@ -1,4 +1,4 @@
-import {addNewsList, maxHeightOfNews} from "./news.js";
+import {addNewsList,} from "./news.js";
 
 export const sendComment = (newsArray) => {
     const wrapper = document.getElementById('newsListBlock');

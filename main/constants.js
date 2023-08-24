@@ -74,19 +74,19 @@ export const newUserNews = [
     }
 ];
 
-export const userMessages = [{
-    senderName: '',
-    senderID: 22,
-    senderPhoto: '',
-    text: '',
-    sendDate: '',
-}, {
-    senderName: '',
-    senderID: 23,
-    senderPhoto: '',
-    text: '',
-    sendDate: '',
-}];
+// export const userMessages = [{
+//     senderName: '',
+//     senderID: 22,
+//     senderPhoto: '',
+//     text: '',
+//     sendDate: '',
+// }, {
+//     senderName: '',
+//     senderID: 23,
+//     senderPhoto: '',
+//     text: '',
+//     sendDate: '',
+// }];
 
 export const newUserMessages = [{
     senderName: 'Alex1',

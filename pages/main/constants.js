@@ -1,9 +1,3 @@
-export const date = new Date().toLocaleDateString();
-export const time = new Date().toLocaleTimeString();
-export const dateAndTime = (date, time) => {
-    return `${date} ${time}`
-};
-
 export const currentUser = {
     id: 1,
     avatar: 'http://',

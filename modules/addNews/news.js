@@ -1,9 +1,10 @@
-import {userNews} from "../../pages/main/constants.js";
+import {hashTags} from "../../helpers/helpers.js";
 
 export const addNewsList = (newsArray, blockId) => {
     const blockForListNews = document.getElementById(blockId);
 
     const listNews = newsArray?.map((item) => {
+        const markingText = hashTags(item.text);
         const comments = item.comments.map((comment) => {
             return `<div>${comment}</div>`
         })
@@ -11,7 +12,7 @@ export const addNewsList = (newsArray, blockId) => {
         return `<div class="newsListElement">
                      <img src=${item.picture} alt="" class="newsImg"/>
                      <div class="newsCreationDate">${item.creationDate}</div>
-                     <div class="newsText" id="newsText">${item.text}</div>
+                     <div class="newsText" id="newsText">${markingText}</div>
                      <div class="newsCommenetsBlock">
                             <label for="commentsTextArea">add comment</label>
                             <textarea id="commentsTextArea" class="newsTextArea" rows="1"></textarea>
@@ -48,14 +49,3 @@ export const maxHeightOfNews = () => {
 
     wrapper.addEventListener('click', handleClick);
 }
-
-export const hashTags = (arr) => {
-    arr.map((item) => {
-        item.text = item.text.replace(/#[0-9A-Za-zА-Яа-яё]+/gi, `<span class="hashtag">$&</span>`);
-    })
-    addNewsList(userNews, 'newsListBlock');
-}
-
-
-// textContent.replace(/#[0-9A-Za-zА-Яа-яё]+/gi, `<span className="hashtag">$&</span>`)
-// text.replace(/(#\w+)/g, '<span class="hashtag">$1</span>')

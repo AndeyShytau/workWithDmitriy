@@ -1,4 +1,4 @@
-import {userNews} from "../../main/constants.js";
+import {userNews} from "../../pages/main/constants.js";
 
 export const addNewsList = (newsArray, blockId) => {
     const blockForListNews = document.getElementById(blockId);

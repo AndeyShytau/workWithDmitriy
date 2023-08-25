@@ -1,13 +1,7 @@
-@font-face {
-    font-family: "Noto Serif Myanmar";
-    src: local("Noto Serif Nyamar"),
-    url("../../fonts/Noto_Serif/NotoSerif-VariableFont_wdth,wght.ttf");
-}
-
 body {
     margin: 0;
     background: aliceblue;
-    font-family: "Noto Serif Myanmar", sans-serif;
+    font-family: 'Roboto','Helvetica Neue',Geneva,"Noto Sans Armenian","Noto Sans Bengali","Noto Sans Cherokee","Noto Sans Devanagari","Noto Sans Ethiopic","Noto Sans Georgian","Noto Sans Hebrew","Noto Sans Kannada","Noto Sans Khmer","Noto Sans Lao","Noto Sans Osmanya","Noto Sans Tamil","Noto Sans Telugu","Noto Sans Thai",arial,Tahoma,verdana,sans-serif;
 }
 
 header {
@@ -15,8 +9,6 @@ header {
     padding: 15px 70px;
     margin-bottom: 30px;
 }
-
-
 
 .logoText {
     font-size: 30px;
@@ -27,14 +19,10 @@ header {
     color: aliceblue;
 }
 
-
-
-
-
-
 main {
     display: flex;
     padding: 0 50px;
+    margin-bottom: 70px;
 }
 
 .basicContent {

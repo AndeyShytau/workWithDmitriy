@@ -1,4 +1,4 @@
-import {currentUser as user} from "../../main/constants.js";
+import {currentUser as user} from "../../pages/main/constants.js";
 import {getHead} from "../getHead/getHead.js";
 import {getHeader} from "../getHeader/getHeader.js";
 import {getMenu} from "../getMenu/menu.js";
@@ -29,7 +29,7 @@ editForm[8].value = user.instagramm;
 editForm[9].value = user.twitter;
 editForm[10].value = user.brif;
 
-saveEditFormButton.onclick = (e) => {
+saveEditFormButton.onclick = () => {
     user.name = editForm[0].value;
     user.surname = editForm[1].value;
     user.surname1 = editForm[2].value;
@@ -41,7 +41,6 @@ saveEditFormButton.onclick = (e) => {
     user.instagramm = editForm[8].value;
     user.twitter = editForm[9].value;
     user.brif = editForm[10].value;
-    console.log(user);
 }
 
 // editProfileButton.addEventListener("click", function (e) {

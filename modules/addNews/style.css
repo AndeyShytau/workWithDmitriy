@@ -23,3 +23,25 @@
 .newsCommentsLabel {
     font-weight: bold;
 }
+
+.newsText {
+    overflow: hidden;
+    height: auto;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.newsText1:after {
+    content: "...ещё";
+    position: absolute;
+    top: 72px;
+    right: 1px;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #d6e2ee;
+}
+
+.hashtag{
+    color: blue;
+}
+

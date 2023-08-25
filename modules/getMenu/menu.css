@@ -1,18 +1,26 @@
 .sideBar ul li a {
     text-decoration: none;
     color: #313131;
+    font-size: 13px;
 }
 
 .sideBar ul li {
     list-style: none;
     width: 100%;
-    padding: 10px;
-    border-radius: 5px;
+    padding: 8px;
+    border-radius: 4px;
     box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+
+.sideBar ul li img {
+    width: 25px;
+    margin-right: 5px;
 }
 
 .sideBar ul li:hover {
-    background: #5C6898;
+    background: rgba(92, 104, 152, 0.75);
     box-sizing: border-box;
     cursor: pointer;
 }
@@ -22,15 +30,14 @@
 }
 
 .sideBar ul {
-    padding: 15px;
     margin: 0;
+    padding: 0;
 }
 
 .sideBar {
-    margin-right: 50px;
+    margin-right: 15px;
     width: 20%;
-    background: #D1D5FA;
     box-sizing: border-box;
-    border-radius: 15px;
+    border-radius: 8px;
     height: 30%;
 }

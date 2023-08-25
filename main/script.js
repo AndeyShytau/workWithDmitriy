@@ -2,22 +2,13 @@ import {addNewsList, hashTags} from "../modules/addNews/news.js";
 import {addUserInfo} from "../modules/getUserInfo/addUserInfo.js";
 import {currentUser, userNews, date, time, dateAndTime} from "./constants.js";
 import {sendComment} from "../modules/addNews/comments.js";
-import {getFooter} from "../modules/getFooter/getFooter.js";
-import {getMenu} from "../modules/getMenu/menu.js";
-import {getHeader} from "../modules/getHeader/getHeader.js";
-import {getHead} from "../modules/getHead/getHead.js"
+import {getTemplate} from "../modules/getTemplate/getTemplate";
 
 const moreInfoButton = document.getElementById('moreInfoButton');
 const newsArea = document.getElementById('newsArea');
 const sendNewsButton = document.getElementById('sendNewsButton');
 let isShowMoreInfo = false;
 
-const getTemplate = () => {
-    getHead();
-    getHeader();
-    getMenu();
-    getFooter();
-}
 getTemplate();
 
 moreInfoButton.addEventListener("click", function (e) {

@@ -1,9 +1,6 @@
-import {addNewsList, hashTags, maxHeightOfNews} from "../modules/addNews/news.js";
+import {addNewsList, hashTags} from "../modules/addNews/news.js";
 import {addUserInfo} from "../modules/getUserInfo/addUserInfo.js";
-import {getRequests} from "../api/getters.js";
-import {GET_PROFILE_DATA, GET_USER_MESSAGES, GET_USER_NEWS} from "../api/constants.js";
-import {setProfileData, setUserMessagesData, setUserNewsData} from "../api/setters.js";
-import {newUserMessages, newUserNews, newUserData, currentUser, userNews, date, time, dateAndTime} from "./constants.js";
+import {currentUser, userNews, date, time, dateAndTime} from "./constants.js";
 import {sendComment} from "../modules/addNews/comments.js";
 import {getFooter} from "../modules/getFooter/getFooter.js";
 import {getMenu} from "../modules/getMenu/menu.js";
@@ -22,10 +19,6 @@ const getTemplate = () => {
     getFooter();
 }
 getTemplate();
-
-// getRequests(GET_PROFILE_DATA).then((res) => addUserInfo(...res, 'moreInfoProfile'));
-// getRequests(GET_USER_NEWS).then((res) => addNewsList(res, 'newsListBlock'));
-// getRequests(GET_USER_MESSAGES).then((res) => console.log('messages', res));
 
 moreInfoButton.addEventListener("click", function (e) {
     if (isShowMoreInfo === false) {
@@ -53,12 +46,6 @@ sendNewsButton.addEventListener("click", function () {
     hashTags(userNews);
     console.log(userNews)
 });
-
-// saveProfileChanges.onclick = () => {
-//     setProfileData(newUserData).then(r => console.log(r.statusText));
-//     setUserNewsData(newUserNews).then(r => console.log(r.statusText));
-//     setUserMessagesData(newUserMessages).then(r => console.log(r.statusText));
-// }
 
 addUserInfo(currentUser, 'moreInfoProfile');
 addNewsList(userNews, 'newsListBlock');

@@ -2,7 +2,7 @@ import {addNewsList, hashTags} from "../modules/addNews/news.js";
 import {addUserInfo} from "../modules/getUserInfo/addUserInfo.js";
 import {currentUser, userNews, date, time, dateAndTime} from "./constants.js";
 import {sendComment} from "../modules/addNews/comments.js";
-import {getTemplate} from "../modules/getTemplate/getTemplate";
+import {getTemplate} from "../modules/getTemplate/getTemplate.js";
 
 const moreInfoButton = document.getElementById('moreInfoButton');
 const newsArea = document.getElementById('newsArea');

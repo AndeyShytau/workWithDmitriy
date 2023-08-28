@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="400" height="400" viewBox="0 0 400 400" xml:space="preserve">
+<desc>Created with Fabric.js 3.6.2</desc>
+<defs>
+</defs>
+<g transform="matrix(6.25 0 0 6.25 200 206.25)" id="Stock_cut"  >
+<path style="stroke: rgb(0,0,0); stroke-width: 2; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: round; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;"  transform=" translate(-16, -17)" d="M 27 5 V 3 H 1 v 26 c 0 1.105 0.895 2 2 2 h 26 c 1.105 0 2 -0.895 2 -2 V 5 H 27 z" stroke-linecap="round" />
+</g>
+<g transform="matrix(6.25 0 0 6.25 162.5 243.75)" id="Stock_cut"  >
+<rect style="stroke: rgb(0,0,0); stroke-width: 2; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: round; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;"  x="-5" y="-4" rx="0" ry="0" width="10" height="8" />
+</g>
+<g transform="matrix(6.25 0 0 6.25 268.75 190.63)" id="Stock_cut"  >
+<line style="stroke: rgb(0,0,0); stroke-width: 2; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: round; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;"  x1="0" y1="-9.5" x2="0" y2="9.5" />
+</g>
+<g transform="matrix(6.25 0 0 6.25 268.75 268.75)" id="Stock_cut"  >
+<line style="stroke: rgb(0,0,0); stroke-width: 2; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: round; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;"  x1="0" y1="-1" x2="0" y2="1" />
+</g>
+<g transform="matrix(6.25 0 0 6.25 187.5 168.75)" id="Stock_cut"  >
+<line style="stroke: rgb(0,0,0); stroke-width: 2; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: round; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;"  x1="-10" y1="0" x2="10" y2="0" />
+</g>
+<g transform="matrix(6.25 0 0 6.25 187.5 143.75)" id="Stock_cut"  >
+<line style="stroke: rgb(0,0,0); stroke-width: 2; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: round; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;"  x1="-10" y1="0" x2="10" y2="0" />
+</g>
+<g transform="matrix(6.25 0 0 6.25 187.5 193.75)" id="Stock_cut"  >
+<line style="stroke: rgb(0,0,0); stroke-width: 2; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: round; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;"  x1="-10" y1="0" x2="10" y2="0" />
+</g>
+<g transform="matrix(6.25 0 0 6.25 231.25 218.75)" id="Stock_cut"  >
+<line style="stroke: rgb(0,0,0); stroke-width: 2; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: round; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;"  x1="-3" y1="0" x2="3" y2="0" />
+</g>
+<g transform="matrix(6.25 0 0 6.25 231.25 243.75)" id="Stock_cut"  >
+<line style="stroke: rgb(0,0,0); stroke-width: 2; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: round; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;"  x1="-3" y1="0" x2="3" y2="0" />
+</g>
+<g transform="matrix(6.25 0 0 6.25 231.25 268.75)" id="Stock_cut"  >
+<line style="stroke: rgb(0,0,0); stroke-width: 2; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: round; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;"  x1="-3" y1="0" x2="3" y2="0" />
+</g>
+</svg>

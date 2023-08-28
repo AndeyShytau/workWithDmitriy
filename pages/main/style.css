@@ -1,13 +1,7 @@
-@font-face {
-    font-family: "Noto Serif Myanmar";
-    src: local("Noto Serif Nyamar"),
-    url("../../fonts/Noto_Serif/NotoSerif-VariableFont_wdth,wght.ttf");
-}
-
 body {
     margin: 0;
     background: aliceblue;
-    font-family: "Noto Serif Myanmar", sans-serif;
+    font-family: 'Roboto','Helvetica Neue',Geneva,"Noto Sans Armenian","Noto Sans Bengali","Noto Sans Cherokee","Noto Sans Devanagari","Noto Sans Ethiopic","Noto Sans Georgian","Noto Sans Hebrew","Noto Sans Kannada","Noto Sans Khmer","Noto Sans Lao","Noto Sans Osmanya","Noto Sans Tamil","Noto Sans Telugu","Noto Sans Thai",arial,Tahoma,verdana,sans-serif;
 }
 
 header {
@@ -25,46 +19,10 @@ header {
     color: aliceblue;
 }
 
-.sideBar ul li a {
-    text-decoration: none;
-    color: #313131;
-}
-
-.sideBar ul li {
-    list-style: none;
-    width: 100%;
-    padding: 10px;
-    border-radius: 5px;
-    box-sizing: border-box;
-}
-
-.sideBar ul li:hover {
-    background: #5C6898;
-    box-sizing: border-box;
-    cursor: pointer;
-}
-
-.sideBar ul li:hover a {
-    color: aliceblue;
-}
-
-.sideBar ul {
-    padding: 15px;
-    margin: 0;
-}
-
-.sideBar {
-    margin-right: 50px;
-    width: 20%;
-    background: #D1D5FA;
-    box-sizing: border-box;
-    border-radius: 15px;
-    height: 30%;
-}
-
 main {
     display: flex;
-    padding: 0 50px;
+    padding: 0 15px;
+    margin-bottom: 70px;
 }
 
 .basicContent {
@@ -98,7 +56,7 @@ main {
     background: #d6e2ee;
     margin-right: 20px;
     border-radius: 15px;
-    height: 100vh;
+    /*height: 100vh;*/
 }
 
 .friendsSection {
@@ -149,7 +107,7 @@ main {
     transition: 2s;
 }
 
-.newsTextArea{
+.newsTextArea {
     width: 60%;
     height: 50px;
     margin-bottom: 10px;

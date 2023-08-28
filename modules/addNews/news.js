@@ -5,8 +5,11 @@ export const addNewsList = (newsArray, blockId) => {
 
     const listNews = newsArray?.map((item) => {
         const markingText = hashTags(item.text);
+
+
         const comments = item.comments.map((comment) => {
-            return `<div>${comment}</div>`
+            const markingComment = hashTags(comment);
+            return `<div>${markingComment}</div>`
         })
 
         return `<div class="newsListElement">

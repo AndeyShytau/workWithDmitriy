@@ -118,6 +118,20 @@
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfff4', endColorstr='#b3bead',GradientType=0 );
 }
 
+.slideOne label:after{
+    position: relative;
+    left: -17px;
+    content: "";
+    padding: 15px;
+}
+
+.slideOne label:before{
+    position: relative;
+    left: -17px;
+    content: "";
+    padding: 15px;
+}
+
 .slideOne input[type=checkbox]:checked + label {
     left: 17px;
 }

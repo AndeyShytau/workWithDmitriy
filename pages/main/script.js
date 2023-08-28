@@ -33,13 +33,18 @@ moreInfoButton.addEventListener("click", function (e) {
 });
 
 sendNewsButton.addEventListener("click", function () {
-    let infoToArr = newsArea.value.trim();
-    userNews.push({
-        text: infoToArr,
-        picture: NEWS_PICTURE,
-        creationDate: getDateTime(),
-        comments: []
-    });
+    if(newsArea.value.length >= 1){
+        let infoToArr = newsArea.value.trim();
+        userNews.push({
+            text: infoToArr,
+            picture: NEWS_PICTURE,
+            creationDate: getDateTime(),
+            comments: []
+        });
+
+    }else{
+        alert('Поле ввода новости не может быть пустым')
+    }
     newsArea.value = "";
     addNewsList(userNews, 'newsListBlock');
 });

@@ -1,4 +1,4 @@
-import {currentUser as user} from "../../pages/main/constants.js";
+import {currentUser as user} from "../../main/constants.js";
 import {getHead} from "../getHead/getHead.js";
 import {getHeader} from "../getHeader/getHeader.js";
 import {getMenu} from "../getMenu/menu.js";
@@ -16,6 +16,8 @@ getTemplate();
 
 const editForm = document.getElementById('editForm');
 const saveEditFormButton = document.getElementById('saveEditFormButton');
+const header = document.getElementById('header');
+const footer = document.getElementById('footer');
 
 editForm[0].value = user.name;
 editForm[1].value = user.surname;
@@ -29,7 +31,7 @@ editForm[8].value = user.instagramm;
 editForm[9].value = user.twitter;
 editForm[10].value = user.brif;
 
-saveEditFormButton.onclick = () => {
+saveEditFormButton.onclick = (e) => {
     user.name = editForm[0].value;
     user.surname = editForm[1].value;
     user.surname1 = editForm[2].value;
@@ -41,6 +43,7 @@ saveEditFormButton.onclick = () => {
     user.instagramm = editForm[8].value;
     user.twitter = editForm[9].value;
     user.brif = editForm[10].value;
+    console.log(user);
 }
 
 // editProfileButton.addEventListener("click", function (e) {
@@ -62,10 +65,12 @@ themeCheckBox.onclick = (e) => {
     if (e.target.checked) {
         body[0].style.background = "#5C6898";
         slideOneDescription.innerHTML = "Включена тёмная тема";
-        getTemplate();
+        header.style.background = "#D1D5FA";
+        footer.style.background = "#D1D5FA";
+
     } else {
         body[0].style.background = "aliceblue";
         slideOneDescription.innerHTML = "Включена светлая тема";
-        getTemplate();
+
     }
 };

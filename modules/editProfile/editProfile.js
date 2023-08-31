@@ -1,16 +1,18 @@
 import {currentUser as user} from "../../pages/main/constants.js";
 import {getPageTitlesAndDescriptions} from "../../pages/constants.js";
 import {getTemplate} from "../getTemplate/getTemplate.js";
+import {checkTheme} from "../../helpers/helpers.js";
+import {THEME_COLORS} from "./constants.js";
 
 const body = document.getElementsByTagName('body');
 const slideOneDescription = document.getElementById('slideOneDescription');
-
-getTemplate(getPageTitlesAndDescriptions.settings);
-
 const editForm = document.getElementById('editForm');
 const saveEditFormButton = document.getElementById('saveEditFormButton');
 const header = document.getElementById('header');
 const footer = document.getElementById('footer');
+const themeCheckBox = document.getElementById('themeCheckBox');
+
+getTemplate(getPageTitlesAndDescriptions.settings);
 
 editForm[0].value = user.name;
 editForm[1].value = user.surname;
@@ -39,32 +41,17 @@ saveEditFormButton.onclick = () => {
     console.log(user);
 }
 
-// editProfileButton.addEventListener("click", function (e) {
-//     e.target.nextElementSibling.style.right = '50px';
-//     e.target.textContent = 'Закончить редактирование';
-// });
-//
-// closeEditForm.addEventListener("click", function (e) {
-//     editProfileInfo.style.right = '-650px';
-//     editProfileButton.textContent = 'Редактировать профиль';
-// });
-
-
-// export const editProfile = (user) => {
-//     getLayout();
-// }
+const setTheme = (isChecked) => {
+    slideOneDescription.innerHTML = isChecked ? THEME_COLORS.dark.title : THEME_COLORS.light.title;
+    localStorage.setItem('theme', JSON.stringify(isChecked ? THEME_COLORS.dark : THEME_COLORS.light));
+    checkTheme();
+}
 
 themeCheckBox.onclick = (e) => {
     if (e.target.checked) {
-        body[0].style.background = "#5C6898";
-        slideOneDescription.innerHTML = "Включена тёмная тема";
-        header.style.background = "#D1D5FA";
-        footer.style.background = "#D1D5FA";
-
+        setTheme(e.target.checked);
     } else {
-        body[0].style.background = "aliceblue";
-        slideOneDescription.innerHTML = "Включена светлая тема";
-
+        setTheme(e.target.checked);
     }
 }
 

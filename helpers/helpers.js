@@ -26,3 +26,16 @@ export const getDateTime = () => {
 
 export const hashTags = (text) => text.replace(/#[0-9A-Za-zА-Яа-яё]+/gi, `<span class="hashtag">$&</span>`);
 export const badLanguage = (text) => text.replace(/пизда/gi, "п***а");
+
+export const checkTheme = () => {
+    const body = document.getElementsByTagName('body');
+    const header = document.getElementById('header');
+    const footer = document.getElementById('footer');
+    const theme = JSON.parse(localStorage.getItem('theme'));
+
+    if (theme) {
+        body[0].style.background = theme.body;
+        header.style.background = theme.header;
+        footer.style.background = theme.footer;
+    }
+}

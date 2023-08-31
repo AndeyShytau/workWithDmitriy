@@ -2,7 +2,7 @@ import {addNewsList} from "../../modules/addNews/news.js";
 import {addUserInfo} from "../../modules/getUserInfo/addUserInfo.js";
 import {getRequests} from "../../api/getters.js";
 import {GET_PROFILE_DATA, GET_USER_NEWS} from "../../api/constants.js";
-import {checkAuth, getDateTime} from "../../helpers/helpers.js";
+import {checkAuth, checkTheme, getDateTime} from "../../helpers/helpers.js";
 import {currentUser, userNews} from "./constants.js";
 import {sendComment} from "../../modules/addNews/comments.js";
 import {getTemplate} from "../../modules/getTemplate/getTemplate.js";
@@ -18,6 +18,7 @@ let isShowMoreInfo = false;
 
 checkAuth();
 getTemplate(getPageTitlesAndDescriptions.main);
+
 
 getRequests(GET_PROFILE_DATA).then((res) => addUserInfo(res[0], 'moreInfoProfile'));
 getRequests(GET_USER_NEWS).then((res) => {

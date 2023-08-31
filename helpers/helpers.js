@@ -25,3 +25,4 @@ export const getDateTime = () => {
 };
 
 export const hashTags = (text) => text.replace(/#[0-9A-Za-zА-Яа-яё]+/gi, `<span class="hashtag">$&</span>`);
+export const badLanguage = (text) => text.replace(/пизда/gi, "п***а");

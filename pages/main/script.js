@@ -19,7 +19,10 @@ checkAuth();
 getTemplate();
 
 getRequests(GET_PROFILE_DATA).then((res) => addUserInfo(res[0], 'moreInfoProfile'));
-getRequests(GET_USER_NEWS).then((res) => addNewsList(res, 'newsListBlock'));
+getRequests(GET_USER_NEWS).then((res) => {
+    addNewsList(res, 'newsListBlock');
+    localStorage.setItem('newsArray', JSON.stringify(res));
+});
 
 moreInfoButton.addEventListener("click", function (e) {
     if (isShowMoreInfo === false) {

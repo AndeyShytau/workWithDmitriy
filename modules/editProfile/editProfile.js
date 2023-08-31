@@ -1,4 +1,4 @@
-import {currentUser as user} from "../../main/constants.js";
+import {currentUser as user} from "../../pages/main/constants.js";
 import {getHead} from "../getHead/getHead.js";
 import {getHeader} from "../getHeader/getHeader.js";
 import {getMenu} from "../getMenu/menu.js";
@@ -73,4 +73,8 @@ themeCheckBox.onclick = (e) => {
         slideOneDescription.innerHTML = "Включена светлая тема";
 
     }
-};
+}
+
+const x = localStorage.getItem('newsArray')
+
+console.log(JSON.parse(x));

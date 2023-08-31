@@ -1,4 +1,4 @@
-import {hashTags} from "../../helpers/helpers.js";
+import {badLanguage, hashTags} from "../../helpers/helpers.js";
 
 export const addNewsList = (newsArray, blockId) => {
     const blockForListNews = document.getElementById(blockId);
@@ -8,7 +8,7 @@ export const addNewsList = (newsArray, blockId) => {
 
 
         const comments = item.comments.map((comment) => {
-            const markingComment = hashTags(comment);
+            let markingComment = badLanguage(hashTags(comment));
             return `<div>${markingComment}</div>`
         })
 

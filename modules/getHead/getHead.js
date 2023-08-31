@@ -1,4 +1,4 @@
- export const getHead = () => {
+ export const getHead = (params) => {
     let head = document.getElementById('head');
 
     head.innerHTML += `
@@ -9,7 +9,8 @@
     <link rel="stylesheet" type="text/css" href="/modules/getMenu/menu.css">
     <link rel="stylesheet" type="text/css" href="/modules/getHeader/header.css">
     <link rel="stylesheet" type="text/css" href="/modules/editProfile/editProfile.css">
-    <title>My Page</title>
+    <title>${params.title}</title>
+    <description>${params.description}</description>
 `
 }
 

@@ -1,18 +1,11 @@
 import {currentUser as user} from "../../pages/main/constants.js";
-import {getHead} from "../getHead/getHead.js";
-import {getHeader} from "../getHeader/getHeader.js";
-import {getMenu} from "../getMenu/menu.js";
-import {getFooter} from "../getFooter/getFooter.js";
+import {getPageTitlesAndDescriptions} from "../../pages/constants.js";
+import {getTemplate} from "../getTemplate/getTemplate.js";
 
 const body = document.getElementsByTagName('body');
 const slideOneDescription = document.getElementById('slideOneDescription');
-const getTemplate = () => {
-    getHead();
-    getHeader();
-    getMenu();
-    getFooter();
-}
-getTemplate();
+
+getTemplate(getPageTitlesAndDescriptions.settings);
 
 const editForm = document.getElementById('editForm');
 const saveEditFormButton = document.getElementById('saveEditFormButton');
@@ -31,7 +24,7 @@ editForm[8].value = user.instagramm;
 editForm[9].value = user.twitter;
 editForm[10].value = user.brif;
 
-saveEditFormButton.onclick = (e) => {
+saveEditFormButton.onclick = () => {
     user.name = editForm[0].value;
     user.surname = editForm[1].value;
     user.surname1 = editForm[2].value;

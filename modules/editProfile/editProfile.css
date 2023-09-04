@@ -135,3 +135,39 @@
 .slideOne input[type=checkbox]:checked + label {
     left: 17px;
 }
+
+/*интерактивная смена цвета шапки и футера с помощью колорпикера iro.js*/
+.changeColor p{
+    text-align: center;
+}
+
+#colorButton{
+    background: none;
+    border: 1px solid #5C6898;
+    border-radius: 15px;
+    padding: 10px;
+    color: #5C6898;
+    transition: 0.5s;
+    width: 200px;
+    margin: 10px auto;
+    display: block;
+
+}
+
+#colorButton:hover{
+    border: 1px solid #5C6898;
+    background: #5C6898;
+    color: aliceblue;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.IroWheel, .IroSlider{
+    margin: 0 auto;
+}
+
+.colorPicker{
+    height: 0px;
+    overflow: hidden;
+    transition: 1s;
+}

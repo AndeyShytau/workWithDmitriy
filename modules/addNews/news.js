@@ -1,5 +1,6 @@
 import {badLanguage, hashTags} from "../../helpers/helpers.js";
 
+
 export const addNewsList = (newsArray, blockId) => {
     const blockForListNews = document.getElementById(blockId);
 

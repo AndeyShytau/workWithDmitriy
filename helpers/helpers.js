@@ -25,7 +25,21 @@ export const getDateTime = () => {
 };
 
 export const hashTags = (text) => text.replace(/#[0-9A-Za-zА-Яа-яё]+/gi, `<span class="hashtag">$&</span>`);
-export const badLanguage = (text) => text.replace(/пизда/gi, "п***а");
+
+
+export const badLanguage = (text) => text.replace(/[хуй\пизда\сука\блядь]+/gi, function (a) {
+    if (a == "хуй") {
+        return "х*й"
+    } else if (a == "пизда") {
+        return "п***а"
+    } else if (a == "сука") {
+        return "с**а"
+    } else if (a == "блядь") {
+        return "б***ь"
+    } else {
+        return a
+    }
+});
 
 export const checkTheme = () => {
     const body = document.getElementsByTagName('body');

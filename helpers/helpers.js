@@ -36,7 +36,9 @@ export const badLanguage = (text) => text.replace(/[хуй\пизда\сука\�
         return "с**а"
     } else if (a == "блядь") {
         return "б***ь"
-    } else {
+    } else if (a == "пизд")
+        return 'п***'
+    else {
         return a
     }
 });

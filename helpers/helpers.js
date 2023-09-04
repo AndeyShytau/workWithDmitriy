@@ -27,16 +27,16 @@ export const getDateTime = () => {
 export const hashTags = (text) => text.replace(/#[0-9A-Za-zА-Яа-яё]+/gi, `<span class="hashtag">$&</span>`);
 
 
-export const badLanguage = (text) => text.replace(/[хуй\пизда\сука\блядь]+/gi, function (a) {
-    if (a == "хуй") {
+export const badLanguage = (text) => text.replace(/[хуй\пизда\сука\бляд]+/gi, function (a) {
+    if (a === "хуй") {
         return "х*й"
-    } else if (a == "пизда") {
+    } else if (a === "пизда") {
         return "п***а"
-    } else if (a == "сука") {
+    } else if (a === "сука") {
         return "с**а"
-    } else if (a == "блядь") {
-        return "б***ь"
-    } else if (a == "пизд")
+    } else if (a === "бляд") {
+        return "б***"
+    } else if (a === "пизд")
         return 'п***'
     else {
         return a

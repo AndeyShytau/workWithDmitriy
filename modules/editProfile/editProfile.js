@@ -2,25 +2,17 @@ import {currentUser as user} from "../../pages/main/constants.js";
 import {getTemplate} from "../getTemplate/getTemplate.js";
 import {getPageTitlesAndDescriptions} from "../../pages/constants.js";
 import{colorPanel} from "./colorPanel.js";
+import {checkTheme} from "../../helpers/helpers.js";
+import {THEME_COLORS} from "./constants.js";
 
 const editForm = document.getElementById('editForm');
 const saveEditFormButton = document.getElementById('saveEditFormButton');
 const header = document.getElementById('header');
 const footer = document.getElementById('footer');
 const themeCheckBox = document.getElementById('themeCheckBox');
-
+const slideOneDescription = document.getElementById('slideOneDescription');
 
 colorPanel(footer, header);
-
-const body = document.getElementsByTagName('body');
-const slideOneDescription = document.getElementById('slideOneDescription');
-// const getTemplate = () => {
-//     getHead();
-//     getHeader();
-//     getMenu();
-//     getFooter();
-// }
-// getTemplate();
 
 
 getTemplate(getPageTitlesAndDescriptions.settings);
@@ -37,7 +29,7 @@ editForm[8].value = user.instagramm;
 editForm[9].value = user.twitter;
 editForm[10].value = user.brif;
 
-saveEditFormButton.onclick = (e) => {
+saveEditFormButton.onclick = () => {
     user.name = editForm[0].value;
     user.surname = editForm[1].value;
     user.surname1 = editForm[2].value;
@@ -52,31 +44,16 @@ saveEditFormButton.onclick = (e) => {
     console.log(user);
 }
 
-// editProfileButton.addEventListener("click", function (e) {
-//     e.target.nextElementSibling.style.right = '50px';
-//     e.target.textContent = 'Закончить редактирование';
-// });
-//
-// closeEditForm.addEventListener("click", function (e) {
-//     editProfileInfo.style.right = '-650px';
-//     editProfileButton.textContent = 'Редактировать профиль';
-// });
-
-
-// export const editProfile = (user) => {
-//     getLayout();
-// }
+const setTheme = (isChecked) => {
+    slideOneDescription.innerHTML = isChecked ? THEME_COLORS.dark.title : THEME_COLORS.light.title;
+    localStorage.setItem('theme', JSON.stringify(isChecked ? THEME_COLORS.dark : THEME_COLORS.light));
+    checkTheme();
+}
 
 themeCheckBox.onclick = (e) => {
     if (e.target.checked) {
         setTheme(e.target.checked);
     } else {
-        body[0].style.background = "aliceblue";
-        slideOneDescription.innerHTML = "Включена светлая тема";
-
+        setTheme(e.target.checked);
     }
 }
-
-const x = localStorage.getItem('newsArray')
-
-console.log(JSON.parse(x));

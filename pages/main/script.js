@@ -27,19 +27,23 @@ getRequests(GET_USER_NEWS).then((res) => {
 });
 
 moreInfoButton.addEventListener("click", function (e) {
-    if (isShowMoreInfo === false) {
-        e.target.nextElementSibling.style.height = 'auto';
-        moreInfoButton.textContent = 'Cвернуть';
-        isShowMoreInfo = !isShowMoreInfo;
-    } else {
-        e.target.nextElementSibling.style.height = '0px';
-        moreInfoButton.textContent = 'Показать больше';
-        isShowMoreInfo = !isShowMoreInfo;
-    }
+    isShowMoreInfo === false ? (moreInfoButton.textContent = 'Cвернуть',
+        e.target.nextElementSibling.style.height = 'auto',
+        isShowMoreInfo = !isShowMoreInfo) : (moreInfoButton.textContent = 'Показать больше',
+        e.target.nextElementSibling.style.height = '0px', isShowMoreInfo = !isShowMoreInfo)
+    // if (isShowMoreInfo === false) {
+    //     e.target.nextElementSibling.style.height = 'auto';
+    //     moreInfoButton.textContent = 'Cвернуть';
+    //     isShowMoreInfo = !isShowMoreInfo;
+    // } else {
+    //     e.target.nextElementSibling.style.height = '0px';
+    //     moreInfoButton.textContent = 'Показать больше';
+    //     isShowMoreInfo = !isShowMoreInfo;
+    // }
 });
 
 sendNewsButton.addEventListener("click", function () {
-    if(newsArea.value.length >= 1){
+    if (newsArea.value.length >= 1) {
         let infoToArr = newsArea.value.trim();
         userNews.push({
             text: infoToArr,
@@ -48,7 +52,7 @@ sendNewsButton.addEventListener("click", function () {
             comments: []
         });
 
-    }else{
+    } else {
         alert('Поле ввода новости не может быть пустым')
     }
     newsArea.value = "";

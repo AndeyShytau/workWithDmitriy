@@ -26,20 +26,20 @@ getRequests(GET_USER_NEWS).then((res) => {
     localStorage.setItem('newsArray', JSON.stringify(res));
 });
 
+const hideInfo = (e) => {
+    moreInfoButton.textContent = 'Cвернуть';
+    e.target.nextElementSibling.style.height = 'auto';
+    isShowMoreInfo = !isShowMoreInfo
+}
+
+const showInfo = (e) => {
+    moreInfoButton.textContent = 'Показать больше';
+    e.target.nextElementSibling.style.height = '0px';
+    isShowMoreInfo = !isShowMoreInfo
+}
+
 moreInfoButton.addEventListener("click", function (e) {
-    isShowMoreInfo === false ? (moreInfoButton.textContent = 'Cвернуть',
-        e.target.nextElementSibling.style.height = 'auto',
-        isShowMoreInfo = !isShowMoreInfo) : (moreInfoButton.textContent = 'Показать больше',
-        e.target.nextElementSibling.style.height = '0px', isShowMoreInfo = !isShowMoreInfo)
-    // if (isShowMoreInfo === false) {
-    //     e.target.nextElementSibling.style.height = 'auto';
-    //     moreInfoButton.textContent = 'Cвернуть';
-    //     isShowMoreInfo = !isShowMoreInfo;
-    // } else {
-    //     e.target.nextElementSibling.style.height = '0px';
-    //     moreInfoButton.textContent = 'Показать больше';
-    //     isShowMoreInfo = !isShowMoreInfo;
-    // }
+    !isShowMoreInfo ? hideInfo(e) : showInfo(e);
 });
 
 sendNewsButton.addEventListener("click", function () {

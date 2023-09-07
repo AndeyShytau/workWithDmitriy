@@ -1,4 +1,4 @@
-import {SET_NEWS_DATA} from "./constants.js";
+import {SET_MESSAGES_DATA, SET_NEWS_DATA, SET_PROFILE_DATA} from "./constants.js";
 
 
 export const setUserNewsData = (data) => {

@@ -1,0 +1,58 @@
+.messageWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.messageWrapper > div {
+    border-radius: 15px;
+    background: rgb(240 248 255);
+}
+
+.friends{
+    width: 27%;
+    border: 1px solid black;
+    height: 100%;
+}
+
+.friends ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.friends li {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.friends img {
+    width: 25px;
+    margin-right: 5px;
+}
+
+.messagesWrapper{
+    width: 70%;
+    border: 1px solid black;
+}
+
+.sendMessagesSection{
+    border-top: 1px solid black;
+}
+
+.sendMessagesSection textarea{
+    display: block;
+    margin: 5px;
+    width: 80%;
+    float: left;
+    resize: none;
+}
+
+
+
+

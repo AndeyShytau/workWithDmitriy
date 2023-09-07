@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="/modules/getMenu/menu.css">
     <link rel="stylesheet" type="text/css" href="/modules/getHeader/header.css">
     <link rel="stylesheet" type="text/css" href="/modules/editProfile/editProfile.css">
+    <link rel="stylesheet" type="text/css" href="../../pages/messagePage/style.css">
     <title>${params.title}</title>
     <description>${params.description}</description>
 `

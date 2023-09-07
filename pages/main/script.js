@@ -10,6 +10,8 @@ import {popUpWindow} from "../../modules/addNews/pop-up window.js";
 import {getPageTitlesAndDescriptions} from "../constants.js";
 
 const NEWS_PICTURE = 'https://media.istockphoto.com/id/1249466085/ru/%D0%B2%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F/%D0%B2%D0%B5%D0%BA%D1%82%D0%BE%D1%80-%D0%B7%D0%BD%D0%B0%D1%87%D0%BE%D0%BA-%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D1%8B%D1%85-%D0%BD%D0%BE%D0%B2%D0%BE%D1%81%D1%82%D0%B5%D0%B9-%D0%B8%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5-%D0%BD%D0%B0%D0%B4%D0%BF%D0%B8%D1%81%D1%8C-%D0%BD%D0%BE%D0%B2%D0%BE%D1%81%D1%82%D0%B8-%D0%BD%D0%B0-%D0%B3%D0%BB%D0%BE%D0%B1%D1%83%D1%81%D0%B5-%D0%BC%D1%83%D0%BB%D1%8C%D1%82%D1%8F%D1%88%D0%BD%D1%8B%D0%B9-%D1%81%D1%82%D0%B8%D0%BB%D1%8C-%D0%BD%D0%B0.jpg?s=2048x2048&w=is&k=20&c=G81o0BVYoEabvmudxaYLhT15lmUGs5POWE5B1FneXnE=';
+const HIDE_INFO = 'Cвернуть';
+const SHOW_INFO = 'Показать больше';
 
 const moreInfoButton = document.getElementById('moreInfoButton');
 const newsArea = document.getElementById('newsArea');
@@ -26,20 +28,16 @@ getRequests(GET_USER_NEWS).then((res) => {
     localStorage.setItem('newsArray', JSON.stringify(res));
 });
 
-const hideInfo = (e) => {
-    moreInfoButton.textContent = 'Cвернуть';
-    e.target.nextElementSibling.style.height = 'auto';
-    isShowMoreInfo = !isShowMoreInfo
-}
-
-const showInfo = (e) => {
-    moreInfoButton.textContent = 'Показать больше';
-    e.target.nextElementSibling.style.height = '0px';
+const toggleInfo = (e, operation, height) => {
+    moreInfoButton.textContent = operation;
+    e.target.nextElementSibling.style.height = height;
     isShowMoreInfo = !isShowMoreInfo
 }
 
 moreInfoButton.addEventListener("click", function (e) {
-    !isShowMoreInfo ? hideInfo(e) : showInfo(e);
+    !isShowMoreInfo
+        ? toggleInfo(e, HIDE_INFO, 'auto')
+        : toggleInfo(e, SHOW_INFO, '0');
 });
 
 sendNewsButton.addEventListener("click", function () {

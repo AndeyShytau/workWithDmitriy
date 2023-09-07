@@ -1,5 +1,4 @@
-import {getRequests} from "../../api/getters.js";
-import {GET_PROFILE_DATA, GET_USER_NEWS} from "../../api/constants.js";
+import {GET_USER_NEWS} from "../../api/constants.js";
 import {newsByHashTag} from "./newsByHashTag.js";
 
 export const popUpWindow = ()=>{

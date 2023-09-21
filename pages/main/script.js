@@ -68,5 +68,5 @@ sendNewsButton.addEventListener("click", function () {
 
 // addUserInfo(currentUser, 'moreInfoProfile');
 // addNewsList(userNews, 'newsListBlock');
-// sendComment(userNews);
+sendComment(userNews);
 popUpWindow();

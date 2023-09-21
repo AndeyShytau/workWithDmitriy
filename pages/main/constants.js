@@ -16,6 +16,45 @@ export const currentUser = {
     subscribers: [],
 };
 
+export const friendsArray = [
+    {
+        id: 3,
+        name: 'Max',
+        ava: '../../icons/raccoon.jpg',
+        messages: ['Привет', 'Как дела', 'я енот']
+    },
+    {
+        id: 4,
+        name: 'Lena',
+        ava: 'https://static1-repo.aif.ru/1/3a/2266946/c/177aaa9b22e56530dddb1b9c1f7a09df.jpg',
+        messages: ['Здарова', 'Чего смотришь', 'енотов не видел']
+    },
+    {
+        id: 5,
+        name: 'Ali',
+        ava: 'https://static1-repo.aif.ru/1/65/2266947/c/3345e9b75bc54f97acc7c867f930737c.jpg',
+        messages: ['хай', 'я енот you are not']
+    },
+    {
+        id: 6,
+        name: 'Max',
+        ava: '../../icons/raccoon.jpg',
+        messages: ['Приветствую', 'Ты как', 'а где все еноты']
+    },
+    {
+        id: 7,
+        name: 'Lena',
+        ava: 'https://static1-repo.aif.ru/1/3a/2266946/c/177aaa9b22e56530dddb1b9c1f7a09df.jpg',
+        messages: ['Добрый вечер', 'Я в поиске енота на сегодняшний вечер', 'Выпиваешь']
+    },
+    {
+        id: 8,
+        name: 'Ali',
+        ava: 'https://static1-repo.aif.ru/1/65/2266947/c/3345e9b75bc54f97acc7c867f930737c.jpg',
+        messages: ['И это снова я', 'Как дела', 'Я проездом из енотовиля']
+    },
+]
+
 export const userNews = [
     {
         text: 'Andrey NEW Новость 1 Объект `HTMLFormElement` представляет форму в DOM и предоставляет ряд свойств и методов для работы с формой. Вот некоторые основные свойства и методы объекта `HTMLFormElement`:',

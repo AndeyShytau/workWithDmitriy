@@ -5,7 +5,7 @@ export const getMenu = () =>{
         <ul>
             <li>
                 <img src="../../icons/user.svg" alt="user">
-                <a href="../index.html">Моя страница</a>
+                <a href="index.html">Моя страница</a>
             </li>
             <li>
                 <img src="../../icons/news.svg" alt="user">
@@ -21,7 +21,7 @@ export const getMenu = () =>{
             </li>
             <li>
                 <img src="../../icons/settings.svg" alt="user">
-                <a href="../index1.html">Настройки</a>
+                <a href="index1.html">Настройки</a>
             </li>
         </ul>
     `

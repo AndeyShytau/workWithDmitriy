@@ -21,38 +21,90 @@ export const friendsArray = [
         id: 3,
         name: 'Max',
         ava: '../../icons/raccoon.jpg',
-        messages: ['Привет', 'Как дела', 'я енот']
+        messages: [
+            {
+                idFrom: 3,
+                message: 'Привет',
+            },
+            {
+                idFrom: 3,
+                message: 'енотище',
+            },
+            {
+                idFrom: 3,
+                message: 'Енота искали',
+            }
+
+        ]
     },
     {
         id: 4,
         name: 'Lena',
         ava: 'https://static1-repo.aif.ru/1/3a/2266946/c/177aaa9b22e56530dddb1b9c1f7a09df.jpg',
-        messages: ['Здарова', 'Чего смотришь', 'енотов не видел']
+        messages: [
+            {
+                idFrom: 4,
+                message: 'Добрый вечер',
+            },
+            {
+                idFrom: 4,
+                message: 'Я в поисках симпотичного енота',
+            },
+            {
+                idFrom: 4,
+                message: 'Пью вино',
+            }]
     },
     {
         id: 5,
         name: 'Ali',
         ava: 'https://static1-repo.aif.ru/1/65/2266947/c/3345e9b75bc54f97acc7c867f930737c.jpg',
-        messages: ['хай', 'я енот you are not']
+        messages: [
+            {
+                idFrom: 5,
+                message: 'Хай',
+            },
+            {
+                idFrom: 5,
+                message: 'Я енот - Али',
+            },
+            {
+                idFrom: 5,
+                message: 'Голову Мне не еби',
+            }
+        ]
     },
     {
         id: 6,
         name: 'Max',
         ava: '../../icons/raccoon.jpg',
-        messages: ['Приветствую', 'Ты как', 'а где все еноты']
+        messages: [
+            {
+                idFrom: 6,
+                message: 'Я Енот Макс',
+            },
+            {
+                idFrom: 6,
+                message: 'Я выпиваю',
+            },
+            {
+                idFrom: 6,
+                message: 'РАд слышать',
+            }
+        ]
     },
-    {
-        id: 7,
-        name: 'Lena',
-        ava: 'https://static1-repo.aif.ru/1/3a/2266946/c/177aaa9b22e56530dddb1b9c1f7a09df.jpg',
-        messages: ['Добрый вечер', 'Я в поиске енота на сегодняшний вечер', 'Выпиваешь']
-    },
-    {
-        id: 8,
-        name: 'Ali',
-        ava: 'https://static1-repo.aif.ru/1/65/2266947/c/3345e9b75bc54f97acc7c867f930737c.jpg',
-        messages: ['И это снова я', 'Как дела', 'Я проездом из енотовиля']
-    },
+    // {
+    //     id: 7,
+    //     name: 'Lena',
+    //     ava: 'https://static1-repo.aif.ru/1/3a/2266946/c/177aaa9b22e56530dddb1b9c1f7a09df.jpg',
+    //     messages: ['Добрый вечер', 'Я в поиске енота на сегодняшний вечер', 'Выпиваешь']
+    // },
+    // {
+    //     id: 8,
+    //     name: 'Ali',
+    //     ava: 'https://static1-repo.aif.ru/1/65/2266947/c/3345e9b75bc54f97acc7c867f930737c.jpg',
+    //     messages: ['И это снова я', 'Как дела', 'Я проездом из енотовиля']
+    // },
 ]
 
 export const userNews = [

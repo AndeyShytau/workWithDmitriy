@@ -1,4 +1,5 @@
 import {friendsArray} from "../../main/constants.js";
+import{currentUser as myPage} from "../../main/constants.js";
 
 const messagesList = document.getElementById('messagesList');
 
@@ -8,12 +9,21 @@ export const getMessages = (friend, newMessage) => {
     });
 
     if (newMessage) {
-        currentUser.messages.push(newMessage);
+        currentUser.messages.push({
+            idFrom: myPage.id,
+            message: newMessage
+        });
     }
 
     const listMessages = currentUser.messages.map((item) => {
-        return `<div class="messages">${item}</div>`
+        if (item.idFrom === myPage.id) {
+            return `<div class="messages my_messages "><span>${item.message}</span></div>`
+        } else {
+            return `<div class="messages"><span>${item.message}</span></div>`
+        }
+
     });
 
     messagesList.innerHTML = listMessages.join('')
+
 }
